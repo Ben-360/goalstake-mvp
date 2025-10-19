@@ -1,5 +1,5 @@
 import axios from 'axios';
-const API = axios.create({ baseURL: import.meta.env.VITE_API_URL || 'http://localhost:4000/api' });
+const API = axios.create({ baseURL: 'https://goalstake-mvp.onrender.com' });
 export const signup = (payload) => API.post('/auth/signup', payload).then(r=>r.data);
 export const login = (payload) => API.post('/auth/login', payload).then(r=>r.data);
 export const getCurrentChallenges = () => API.get('/challenges/current').then(r=>r.data);

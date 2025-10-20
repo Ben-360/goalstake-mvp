@@ -10,4 +10,7 @@ export const saveFantasy = (id, userId, players) => API.post(`/challenges/${id}/
 export const deposit = (payload) => API.post('/payments/deposit', payload).then(r=>r.data);
 export const withdraw = (payload) => API.post('/payments/withdraw', payload).then(r=>r.data);
 export const leaderboard = (id) => API.get(`/challenges/${id}/leaderboard`).then(r=>r.data);
+
+export const getProfile = () => API.get('/auth/profile').then(r => r.data);
+
 export default API;
